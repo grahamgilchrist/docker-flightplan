@@ -14,6 +14,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src
 
 # Install the local flightplan module so we don't have to include per project
+# We install one directory above the project so that local require() calls will
+#  find the module, but it can be overriden by node_modules folder in the project
 RUN npm install flightplan@0.6.2 \
     && npm cache clear
 
