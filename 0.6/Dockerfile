@@ -1,4 +1,4 @@
-FROM grahamgilchrist/node-onbuild:0.12
+FROM node:0.12
 
 # Make sure we have rsync installed as well
 RUN apt-get update && \
